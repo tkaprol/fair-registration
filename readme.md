@@ -1,23 +1,43 @@
-## Laravel PHP Framework
+## An Example Online Fair Stand Registration Application with Laravel PHP Framework
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+### Introduction
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+This project allows to manage your online fair registrations. Visitors can register and select their own Stand over Google Maps. 
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+In the example, I already defined some pla
 
-## Official Documentation
+> **Note:** Application developed for end user perspective only. There is no admin features to define Expos & halls
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-## Contributing
+### Instructions to Install Project
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+1. Create an .env file
+2. Setup database & e-mail services at the .env file
+          APP_ENV=local
+          APP_DEBUG=true
+          APP_KEY=ICWLrKAc0p0aNjhDnbdVJPF53aHLXZBY
+
+          DB_HOST=localhost
+          DB_DATABASE=<<DB>>
+          DB_USERNAME=<<USER>>
+          DB_PASSWORD=<<PASSWORD>>
+
+          CACHE_DRIVER=file
+          SESSION_DRIVER=file
+          QUEUE_DRIVER=sync
+
+          MAIL_DRIVER=smtp
+          MAIL_HOST=smtp.gmail.com
+          MAIL_PORT=587
+          MAIL_USERNAME=<<MAIL>>@gmail.com
+          MAIL_PASSWORD=<<PASSWORD>>
+
+3. Import Database from SQL file located at Database folder to your mySQL server
+
+4. Point Code/Public folder to your apache servers root
+
+5. (optional) Change Google Maps API key from Code/resources/views/app.blade.php if necessary
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+This project is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
